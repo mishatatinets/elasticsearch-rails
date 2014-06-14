@@ -102,6 +102,7 @@ gsub_file "app/models/authorship.rb", %r{belongs_to :article$}, <<-CODE
 belongs_to :article, touch: true
 CODE
 
+touch "app/models/article.rb"
 insert_into_file "app/models/article.rb", after: "ActiveRecord::Base" do
   <<-CODE
 
